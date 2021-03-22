@@ -2,23 +2,30 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #1
+
 z = np.arange(0, 11, 2)
 k = np.arange(30, 51, 4)
-plt.subplot(1, 2, 1)
-plt.plot(z, k)
-plt.title("K as a function of Z")
-plt.xlabel("z")
-plt.ylabel("k")
-plt.savefig("1.1.png")
+
+fig, (ax1, ax2) = plt.subplots(1, 2)
+fig.suptitle('K as a function of Z')
+ax1.plot(z, k)
+ax2.stem(z, k)
+
+# plt.subplot(1, 2, 1)
+# plt.plot(z, k)
+# plt.title("K as a function of Z")
+for ax in (ax1, ax2):
+    ax.set(xlabel='z', ylabel='k')
+plt.savefig("1.png")
 plt.show()
 
-plt.subplot(1, 2, 1)
-plt.stem(z, k)
-plt.title("K as a function of Z")
-plt.xlabel("z")
-plt.ylabel("k")
-plt.savefig("1.2.png")
-plt.show()
+# plt.subplot(1, 2, 1)
+# plt.stem(z, k)
+# plt.title("K as a function of Z")
+# plt.xlabel("z")
+# plt.ylabel("k")
+# plt.savefig("1.2.png")
+# plt.show()
 
 # N = 50
 # x = np.random.rand(N)
