@@ -1,0 +1,54 @@
+%1
+z= 0:2:10;
+k= 30:4:50;
+figure;
+subplot (1,2,1)
+plot (z,k)
+title ('K as a function of Z')
+xlabel ('z');
+ylabel ('k');
+
+subplot (1,2,2)
+stem (z, k);
+title ('K as a function of Z')
+xlabel ('z');
+ylabel ('k');
+
+%2
+a= [1,2,3;4,9,8;3,5,6]
+b= [5,8,23;10,7,1;3,2,1]
+c= a + b
+d= a .* b
+e= a.' + b.'
+
+%3
+a=4;
+for i= 1:20
+    a=a+2;
+end
+disp(a)
+
+
+%4
+r=randn(1,100);
+meanR= mean(r);
+if meanR > 0.4
+    disp('the mean is larger than 0.4')
+else
+    disp('the mean is lower than 0.4')
+end
+
+%5
+time= 0:0.2:3
+randVec1= rand(1,16)
+randVec2= rand(1,16)
+
+figure;
+plot (time,randVec1)
+hold on;
+plot (time, randVec2);
+title ('randomVectors as functions of time')
+xlabel ('time');
+ylabel ('vector');
+legend ('randVec1', 'randVec2')
+
