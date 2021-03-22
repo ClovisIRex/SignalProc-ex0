@@ -11,13 +11,23 @@ fig.suptitle('K as a function of Z')
 ax1.plot(z, k)
 ax2.stem(z, k)
 
-# plt.subplot(1, 2, 1)
-# plt.plot(z, k)
-# plt.title("K as a function of Z")
 for ax in (ax1, ax2):
     ax.set(xlabel='z', ylabel='k')
 plt.savefig("1.png")
 plt.show()
+
+
+#2
+matrixA = np.array([1, 2, 3, 4, 9, 8, 3, 5, 6]).reshape(3, 3)
+matrixB = np.array([5, 8, 23, 10, 7, 1, 3, 2, 1]).reshape(3, 3)
+matrixC = matrixA + matrixB
+matrixD = matrixA * matrixB
+matrixE = np.transpose(matrixA) + np.transpose(matrixB)
+
+
+#3
+
+
 
 # plt.subplot(1, 2, 1)
 # plt.stem(z, k)
