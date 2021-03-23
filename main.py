@@ -27,6 +27,36 @@ matrixE = np.transpose(matrixA) + np.transpose(matrixB)
 
 #3
 
+a = 4
+for i in range(20):
+    a += 2
+print(a)
+
+#4
+r = np.random.randn(100)
+meanR = np.mean(r)
+
+if meanR > 0.4:
+    print('the mean is larger than 0.4')
+else:
+    print('the mean is lower than 0.4')
+
+
+#5
+time = np.arange(0, 3, 0.2)
+rand1 = np.random.rand(1, 16)
+rand2 = np.random.rand(1, 16)
+
+fig, (ax1, ax2) = plt.subplots(1, 2)
+fig.suptitle('K as a function of Z')
+ax1.plot(z, k)
+ax2.stem(z, k)
+
+for ax in (ax1, ax2):
+    ax.set(xlabel='z', ylabel='k')
+plt.savefig("1.png")
+plt.show()
+
 
 
 # plt.subplot(1, 2, 1)
