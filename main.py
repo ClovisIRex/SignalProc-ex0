@@ -43,18 +43,20 @@ else:
 
 
 #5
-time = np.arange(0, 3, 0.2)
-rand1 = np.random.rand(1, 16)
-rand2 = np.random.rand(1, 16)
+time = np.arange(0, 3.2, 0.2)
+randVec_1 = np.random.rand(16)
+randVec_2 = np.random.rand(16)
 
-fig, (ax1, ax2) = plt.subplots(1, 2)
-fig.suptitle('K as a function of Z')
-ax1.plot(z, k)
-ax2.stem(z, k)
+# plotting the line 1 points
+plt.plot(time, randVec_1, label="randVec_1")
+plt.plot(time, randVec_2, label="randVec_2")
 
-for ax in (ax1, ax2):
-    ax.set(xlabel='z', ylabel='k')
-plt.savefig("1.png")
+plt.xlabel('time')
+plt.ylabel('vector')
+plt.title('randomVectors as functions of time')
+
+plt.legend()
+plt.savefig("5.png")
 plt.show()
 
 
